@@ -2,7 +2,7 @@
     "java.project.referencedLibraries": [
         //"lib/**/*.jar",
         //"referenced_library/json-20180813.jar",
-        "referenced_library/json-simple-1.1.1.jar",
+        "library/json-simple-1.1.1.jar",
         //"referenced_library/jackson-databind-2.12.1.jar",
         //"referenced_library/jackson-core-2.12.1.jar",
         //"referenced_library/jackson-annotations-2.12.1.jar",
