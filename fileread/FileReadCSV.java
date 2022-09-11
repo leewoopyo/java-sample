@@ -40,6 +40,11 @@ public class FileReadCSV {
 
         // 패키지 명을 가져오기 위한 처리
         Class c = null;
+        /* 
+        Class c2 = new FileReadCSV().getClass();
+        System.out.println(c2.getName());
+        System.out.println(c2.getPackage().getName()); 
+        */
 
         try {
             c = Class.forName("fileread.FileReadCSV");

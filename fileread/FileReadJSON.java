@@ -1,7 +1,14 @@
 package fileread;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
+import org.json.simple.parser.JSONParser;
 
 public class FileReadJSON {
     public static void main(String[] args) {
@@ -14,10 +21,16 @@ public class FileReadJSON {
      */
     public static void readJson() {
 
+        Class c = new FileReadJSON().getClass();
+        System.out.println(c.getName());
+        System.out.println(c.getPackage().getName()); 
+
         //파일경로
-        String filename = "\\fileread_test\\serializeJson_sample.json";     //파일명
-        Path pathTofile = Paths.get("");        //path 설정("" 부분에 파일이름이 들어감, ""이면 해당 파일이 포함된 패키지의 디렉토리까지 표시됨)
-        System.out.println(pathTofile.toAbsolutePath());    
+        String filename = "serializeJson_sample.json";     //파일명
+        Path pathTofile = Paths.get("").toAbsolutePath();        //path 설정("" 부분에 파일이름이 들어감, ""이면 해당 파일이 포함된 패키지의 디렉토리까지 표시됨)
+        String packagePath = c.getPackage().getName();
+        System.out.println(pathTofile);    
+        System.out.println(packagePath);    
 
         //JSONParser 객체 생성
         try {
@@ -32,7 +45,8 @@ public class FileReadJSON {
             //Object obj = parser.parse(Files.newBufferedReader(Paths.get(pathTofile.toAbsolutePath() + filename),Charset.forName("UTF-8")));     //1
             
             //2
-            FileInputStream fis = new FileInputStream(Paths.get(pathTofile.toAbsolutePath().toString()) + filename);    
+            //FileInputStream fis = new FileInputStream(Paths.get(pathTofile.toAbsolutePath().toString()) + filename);    
+            FileInputStream fis = new FileInputStream(pathTofile + "\\" + packagePath + "\\" + filename);    
             BufferedInputStream bis = new BufferedInputStream(fis);    
             InputStreamReader isr = new InputStreamReader(bis,Charset.forName("UTF-8"));   //UTF-8 charset
             BufferedReader br = new BufferedReader(isr);
@@ -51,7 +65,7 @@ public class FileReadJSON {
                 //read하면서, 인자로 들어간 byte array에 1바이트씩 들어간다.
                 while (bis.read(readByteArr) != -1) {
                 }
-                System.out.println(new String(readByteArr));
+                System.out.println(new String(readByteArr, Charset.forName("UTF-8")));
                 
             } catch (Exception e) {
                 e.printStackTrace();
