@@ -12,3 +12,6 @@ git command : git clone -b jdbc --single-branch https://github.com/leewoopyo/jav
 
 Branch 4. serialize : serialize 샘플
 git command : git clone -b serialize --single-branch https://github.com/leewoopyo/java-sample.git
+
+Branch 5. socket : socket 샘플
+git command : git clone -b socket --single-branch https://github.com/leewoopyo/java-sample.git
