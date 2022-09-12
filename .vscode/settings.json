@@ -1,13 +1,13 @@
 {
     "java.project.referencedLibraries": [
-        //"lib/**/*.jar",
-        //"referenced_library/json-20180813.jar",
-        "library/json-simple-1.1.1.jar",
-        //"referenced_library/jackson-databind-2.12.1.jar",
-        //"referenced_library/jackson-core-2.12.1.jar",
-        //"referenced_library/jackson-annotations-2.12.1.jar",
-        //"referenced_library/h2-1.4.199.jar",
-        //"referenced_library/lombok.jar",
-        //"referenced_library/commons-cli-1.4.jar"
+        "library/**/*.jar",
+        //"library/json-20180813.jar",
+        //"library/json-simple-1.1.1.jar",
+        //"library/jackson-databind-2.12.1.jar",
+        //"library/jackson-core-2.12.1.jar",
+        //"library/jackson-annotations-2.12.1.jar",
+        //"library/h2-1.4.199.jar",
+        //"library/lombok.jar",
+        //"library/commons-cli-1.4.jar"
     ]
 }
