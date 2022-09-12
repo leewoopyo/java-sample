@@ -1,0 +1,9 @@
+2021-03-12 01:44:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEMBER" already exists; SQL statement:
+create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id)) [42101-199]
+2021-03-14 20:14:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEMBER" already exists; SQL statement:
+create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id)) [42101-199]
+2021-03-14 20:15:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEMBER" already exists; SQL statement:
+create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id)) [42101-199]
