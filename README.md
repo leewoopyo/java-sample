@@ -9,3 +9,6 @@ git command : git clone -b file_read --single-branch https://github.com/leewoopy
 
 Branch 3. jdbc : h2db로 jdbc 샘플
 git command : git clone -b jdbc --single-branch https://github.com/leewoopyo/java-sample.git
+
+Branch 4. serialize : serialize 샘플
+git command : git clone -b serialize --single-branch https://github.com/leewoopyo/java-sample.git
